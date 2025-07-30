@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buka Surat untuk Najla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Pacifico', cursive;
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .gif {
+      width: 120px;
+      height: auto;
+      margin: 0 20px;
+    }
+
+    .envelope-section {
+      text-align: center;
+    }
+
+    .envelope {
+      width: 250px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .text {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #d6336c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/cat.gif" alt="Gif Kiri" class="gif" />
+    
+    <div class="envelope-section">
+      <img src="images/love.png" alt="Amplop Cinta" class="envelope" id="openEnvelope" />
+      <div class="text">Klik amplop ini, Sayang 💌</div>
+    </div>
+    
+    <img src="images/cat.gif" alt="Gif Kanan" class="gif" />
+  </div>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script>
+    document.getElementById("openEnvelope").addEventListener("click", () => {
+      setTimeout(() => {
+        window.location.href = "isi.html";
+      }, 0);
+    });
+  </script>
+</body>
+</html>
